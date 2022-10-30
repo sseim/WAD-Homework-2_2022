@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="res/css/style.css" />
-    <link rel="stylesheet" href="res/css/index.css" />
+    <link rel="stylesheet" href="res/css/login.css" />
     <title>Login</title>
 </head>
 
@@ -17,6 +17,15 @@
         <div>
             <a href="index.html">Home</a>
         </div>
+
+        <nav>
+            <button id="loginBtn"></button>
+            <ul class="hiddenMenu">
+                <li>Sulo Seim</li>
+                <li>sulo.seim@ut.ee</li>
+                <li><a href="login.html">Login Options page</a></li>
+            </ul>
+        </nav>
 
     </header>
     
@@ -35,10 +44,10 @@
                         <form action="index.html" method="post">
                             <input type="email" placeholder="Email" required="required">
                             <br>
-				            <br>
+				<br>
                             <input type="password" placeholder="Password" required="required">
                             <br>
-				            <br>
+				<br>
                             <input type="submit" class="login-button" value="Log In">
                         </form>
                         <br>
@@ -49,6 +58,8 @@
         </div>
         <div class="sideBlock"></div>
     </main>
+
+    <script src="src/js/scriptMenu.js"></script>
 
 </body>
 
