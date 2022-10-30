@@ -34,12 +34,15 @@ main {
 
 
 .userIcon {
+	display: block;
     width: 55px;
     height: 55px;
+	margin-right: 1rem;
     border-radius: 15px;
     background-image: url("../images/profile.png");
     background-size: cover;
     background-repeat: no-repeat;
+	    cursor: pointer;
 }
 
 
@@ -83,4 +86,3 @@ footer {
         height: 50px;
     }
 }
-
