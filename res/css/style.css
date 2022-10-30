@@ -27,13 +27,20 @@ main {
     color: #222;
 }
 
+header a + div {
+    display: inline-block;
+    font-size: 1.55rem;
+    user-select: none;
+}
+
 body {
     padding: 1.0rem;
+	background-color: var(--colorBody);
 }
 
 body > * {
     max-width: 1920px;
-    width:100%;
+    min-width: 300px;
     margin: 0 auto;
 }
 
@@ -64,15 +71,6 @@ header a:hover {
     background-color: #ffffff;
 }
 
-
-
-.postHeader {
-    margin-bottom: 1.0rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 #loginBtn {
     display: block;
     width: 100px;
@@ -80,6 +78,43 @@ header a:hover {
     background-image: url("../images/profile.png");
     background-size: cover;
     background-repeat: no-repeat;
+    border: none; /* removes the click-effect */
+    border-radius: 7px; 
+    cursor: pointer; 
+}
+
+.hiddenMenu { 
+    display: none;
+}
+
+.show { /*styles the dropdown menu when it's visible*/
+    display: inline-block;
+    position: absolute;
+    transform: translateX(-100%);
+    margin-left: 70px;
+    border-radius: 5%;
+    padding: 1%;
+    list-style: none;
+    overflow: auto;
+    background-color: var(--colorAccent);
+}
+
+.show li {
+    padding: 1%;
+}
+.show a {
+    font-size: 20px;
+    padding-left: 0%;
+    padding-right: 0%;
+    border-radius: 3px;
+}
+
+
+.postHeader {
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .sideBlock {
@@ -106,6 +141,16 @@ article {
 
 .media {
     width: 100%;
+}
+
+@media (max-width: 400px) {
+    header a, .header a + div {
+        font-size: 1rem;
+    }
+    #loginBtn {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 @media (max-width: 1080px) {
